@@ -25,5 +25,5 @@ class SeasonEnum(Enum):
 
 class RecommendResponse(BaseModel):
     country: str
-    season: str
+    season: SeasonEnum
     recommendations: list[str]
