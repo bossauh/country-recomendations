@@ -35,9 +35,7 @@ class Recommender:
 
         logger.debug(f"Sending prompt to OpenAI: {prompt}")
         response = await openai.ChatCompletion.acreate(
-            model="gpt-3.5-turbo",
-            messages=prompt,
-            temperature=0.75,  # High temperature to get varied results every time.
+            model="gpt-3.5-turbo", messages=prompt, temperature=0
         )
         content = response.choices[0].message.content
         logger.info(f"Received response from OpenAI: {content}")
